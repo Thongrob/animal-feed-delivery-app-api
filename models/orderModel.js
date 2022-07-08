@@ -4,40 +4,76 @@ const mongoose = require("mongoose")
 const orderSchema = mongoose.Schema({
   orderNumber:{
     type:String,
-    require:false,
+    required:false,
     unique:false
   },
   driverName : {
     type:String,
-    require:true
+    required:true
   },
-  productName : {
+  timothyItem : {
     type:String,
-    require:true
+    required:false
   },
-  weight:{
-    type:Number,
-    require:true
+  alphaphaItem : {
+    type:String,
+    required:false
   },
-  quantity:{
+  rabbitItem : {
+    type:String,
+    required:false
+  },
+  goatItem : {
+    type:String,
+    required:false
+  },
+  timothyWeight:{
     type:Number,
-    require:true
+    required:false
+  },
+  alphaphaWeight:{
+    type:Number,
+    required:false
+  },
+  rabbitWeight:{
+    type:Number,
+    required:false
+  },
+  goatWeight:{
+    type:Number,
+    required:false
+  },
+  timothyQuantity:{
+    type:Number,
+    required:false
+  },
+  alphaphaQuantity:{
+    type:Number,
+    required:false
+  },
+  rabbitQuantity:{
+    type:Number,
+    required:false
+  },
+  goatQuantity:{
+    type:Number,
+    required:false
   },
   car:{
     type:String,
-    require:false
+    required:false
   },
   bookingTime:{
     type:String,
-    require:true
+    required:true
   },
   bookingDate:{
     type:String,
-    require:true
+    required:true
   },
   productPrice:{
     type:Number,
-    require:false
+    required:false
   },
   shippingPrice:{
     type:Number
@@ -47,15 +83,15 @@ const orderSchema = mongoose.Schema({
   },
   images:{
     type:String,
-    require:false
+    required:false
   },
   buyer:{
     type:String,
-    require:true
+    required:true
   },
   contact:{
     type:String,
-    require:true
+    required:true
   },
   author:{
     type:String,
@@ -63,8 +99,7 @@ const orderSchema = mongoose.Schema({
   },
   slug:{
     type:String,
-    lowercase:true,
-    require:true,
+    lowercase:true
   }
 
 },{timestamps:true})
